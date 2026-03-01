@@ -125,8 +125,8 @@ paper/
 
 ## Links
 
-- 📄 Paper PDF (see `pdf/Lorentz.pdf`)
-- 🌐 Website: https://cosmochrony.org
+- 📄 [Paper PDF](https://github.com/Cosmochrony/lorentz-paper/blob/main/pdf/Lorentz.pdf)
+- 🌐 Website: [cosmochrony.org](https://cosmochrony.org)
 
 ## Citation
 
