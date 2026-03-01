@@ -7,9 +7,7 @@
     In the Riemannian formulation developed previously, the spectral entropy
     functional is defined by
     \[
-      S_\Pi[g]
-      =
-      \frac12 \log \det{}' A_g,
+      S_\Pi[g] = \frac12 \log \det{}' A_g,
     \]
     where $A_g$ is a Laplace-type elliptic operator.
     Its renormalized first variation generates an infrared Einstein response,
@@ -23,27 +21,16 @@
     To describe gravitational waves and dynamical perturbations,
     a Lorentzian completion is required.
 
-    We therefore introduce a hyperbolic operator
-    $\mathcal{D}_g$
-    such that its spatial restriction on constant-time slices reduces to $A_g$.
-    In a $3+1$ decomposition with lapse $N$ and shift $N^i$,
-    the d'Alembertian reads
+    We therefore introduce a hyperbolic operator $\mathcal{D}_g$ such that its spatial restriction on constant-time
+    slices reduces to $A_g$.
+    In a $3+1$ decomposition with lapse $N$ and shift $N^i$, the d'Alembertian reads
     \[
-      \Box_g
-      =
-      -\frac{1}{N^2}
-      (\partial_t - \mathcal{L}_{\vec N})^2
-      +
-      \Delta_\gamma
-      +
-      \text{(connection terms)},
+      \Box_g = -\frac{1}{N^2} (\partial_t - \mathcal{L}_{\vec N})^2 + \Delta_\gamma + \text{(connection terms)},
     \]
     where $\Delta_\gamma$ is the Laplacian on spatial slices.
     In the quasi-static regime $N \simeq 1$, $N^i \simeq 0$, and for slowly varying extrinsic curvature, one recovers
     \[
-      \Box_g
-      \;\longrightarrow\;
-      -\partial_t^2 + \Delta_\gamma.
+      \Box_g \;\longrightarrow\; -\partial_t^2 + \Delta_\gamma.
     \]
     The elliptic operator $A_g$ of the Riemannian theory is thus identified
     with the spatial block of the Lorentzian operator.
@@ -53,14 +40,10 @@
 
     The Lorentzian completion of the spectral entropy functional is defined as
     \[
-      S_\Pi^{(L)}[g]
-      =
-      \frac12 \Re \log \det{}' \mathcal{D}_g.
+      S_\Pi^{(L)}[g] = \frac12 \Re \log \det{}' \mathcal{D}_g.
     \]
-    Equivalently, one may formulate the theory using a
-    Schwinger--Keldysh contour prescription,
-    so that the inverse operator entering functional variations is the
-    retarded Green operator $G_R$.
+    Equivalently, one may formulate the theory using a Schwinger--Keldysh contour prescription,
+    so that the inverse operator entering functional variations is the retarded Green operator $G_R$.
 
     This choice ensures:
 
@@ -77,20 +60,11 @@
   \subsection{Second Variation and Quadratic Operator}
     \label{subsec:second-variation-and-quadratic-operator}
 
-    The second variation of the Lorentzian spectral action takes the
-    operatorial form
+    The second variation of the Lorentzian spectral action takes the operatorial form
     \[
-      \delta^2 S_\Pi^{(L)}
-      =
-      \frac12
-      \mathrm{Tr}
-      \left(
-        G_R \,\delta^2 \mathcal{D}_g
-      \right)
+      \delta^2 S_\Pi^{(L)} = \frac12 \mathrm{Tr} \left( G_R \,\delta^2 \mathcal{D}_g \right)
       -
-      \frac12
-      \mathrm{Tr}
-      \left(
+      \frac12 \mathrm{Tr} \left(
         G_R \,\delta \mathcal{D}_g\,
         G_R \,\delta \mathcal{D}_g
       \right).
@@ -99,25 +73,19 @@
     This expression is the hyperbolic analogue of the elliptic formula derived previously.
     The replacement $A_g^{-1} \to G_R$ is the essential modification ensuring causal structure.
 
+    The existence and uniqueness of retarded Green operators for normally
+    hyperbolic operators on globally hyperbolic spacetimes are standard
+    results of Lorentzian analysis~\cite{Baer2015}.
+    The use of a Schwinger--Keldysh prescription ensures a causal and
+    real effective action in curved spacetime~\cite{Jordan1986,Calzetta2008}.
+
     Expanding about Minkowski spacetime,
     \[
-      g_{\mu\nu}
-      =
-      \eta_{\mu\nu}
-      +
-      h_{\mu\nu},
+      g_{\mu\nu} = \eta_{\mu\nu} + h_{\mu\nu},
     \]
     one obtains a quadratic operator of the schematic form
     \[
-      \mathcal{O}
-      =
-      c_{\mathrm{EH}} \Box
-      +
-      \beta \Box^2
-      +
-      \text{(non-local terms)}
-      +
-      \mathcal{O}(R\ell_\chi^2).
+      \mathcal{O} = c_{\mathrm{EH}} \Box + \beta \Box^2 + \text{(non-local terms)} + \mathcal{O}(R\ell_\chi^2).
     \]
 
     In the infrared regime $R\ell_\chi^2 \ll 1$, the dominant local contributions are the Einstein term and the
