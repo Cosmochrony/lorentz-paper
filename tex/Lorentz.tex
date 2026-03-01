@@ -1,0 +1,63 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{enumitem}
+
+% -------------------------------------------------------------------
+% Theorem environments
+% -------------------------------------------------------------------
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+
+% -------------------------------------------------------------------
+% Macros
+% -------------------------------------------------------------------
+\newcommand{\Spi}{S_{\Pi}}
+\newcommand{\Ag}{A_g}
+\newcommand{\hk}{K}
+\newcommand{\tr}{\operatorname{Tr}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\half}{\tfrac{1}{2}}
+
+\begin{document}
+
+  \title{Causal Propagation and Gravitational Waves from Projective Spectral Dynamics}
+
+  \author{J\'{e}r\^{o}me Beau\\
+  \small Independent Researcher, France\\
+  \small \texttt{jerome.beau@cosmochrony.org}}
+
+  \maketitle
+
+  \input{abstract}
+
+  \noindent\textbf{Keywords:} Spectral geometry, Emergent gravity, Lorentzian geometry, Gravitational waves,
+  Modified dispersion relations, Effective field theory, Heat-kernel expansion, Seeley–DeWitt coefficients,
+  Causal propagation, Quantum gravity phenomenology
+
+ \clearpage
+  \tableofcontents
+  \newpage
+
+  \input{00-introduction/introduction}
+  \input{01-lorentzian_completion/lorentzian_completion}
+  \input{02-ir_spectrum/ir_spectrum}
+  \input{03-dispersion/dispersion}
+  \input{04-gw_constraints/gw_constraints}
+  \input{05-conclusion/conclusion}
+
+  \begin{thebibliography}{99}
+  \end{thebibliography}
+
+\end{document}

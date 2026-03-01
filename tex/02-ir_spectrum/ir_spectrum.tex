@@ -1,0 +1,159 @@
+\section{Infrared Spectrum and Propagating Degrees of Freedom}
+  \label{sec:ir_spectrum}
+
+  \subsection{Linearization Around Minkowski Spacetime}
+    \label{subsec:linearization-around-minkowski-spacetime}
+
+    We consider perturbations about flat spacetime,
+    \[
+      g_{\mu\nu}
+      =
+      \eta_{\mu\nu}
+      +
+      h_{\mu\nu},
+    \]
+    and work to quadratic order in $h_{\mu\nu}$.
+    In the infrared regime
+    $R\ell_\chi^2 \ll 1$,
+    the quadratic operator derived from
+    $\delta^2 S_\Pi^{(L)}$
+    takes the local form
+    \[
+      \mathcal{O}_{\mu\nu}^{\ \ \rho\sigma}
+      =
+      c_{\mathrm{EH}}\Box
+      +
+      \beta \Box^2
+      +
+      \mathcal{O}(\ell_\chi^4 \Box^3),
+    \]
+    where $c_{\mathrm{EH}}>0$ and $\beta<0$ in the natural spectral scheme.
+
+    We impose harmonic gauge,
+    \[
+      \partial^\mu \bar h_{\mu\nu}
+      =
+      0,
+      \qquad
+      \bar h_{\mu\nu}
+      =
+      h_{\mu\nu}
+      -
+      \frac12 \eta_{\mu\nu} h,
+    \]
+    which eliminates gauge redundancies at linear order.
+
+  \subsection{Scalar--Vector--Tensor Decomposition}
+    \label{subsec:scalar--vector--tensor-decomposition}
+
+    To identify the propagating modes, we perform a
+    scalar--vector--tensor (SVT) decomposition with respect to spatial
+    rotations.
+    Writing spatial indices as $i,j=1,2,3$, the perturbation splits as
+    \[
+      h_{00},
+      \qquad
+      h_{0i} = \partial_i B + B_i,
+      \qquad
+      h_{ij}
+      =
+      2\psi\,\delta_{ij}
+      +
+      2\partial_i\partial_j E
+      +
+      \partial_i E_j
+      +
+      \partial_j E_i
+      +
+      h^{\mathrm{TT}}_{ij},
+    \]
+    with
+    \[
+      \partial_i B_i = 0,
+      \qquad
+      \partial_i E_i = 0,
+      \qquad
+      \partial_i h^{\mathrm{TT}}_{ij} = 0,
+      \qquad
+      h^{\mathrm{TT}}_{ii} = 0.
+    \]
+
+    In harmonic gauge, the scalar and vector components enter the quadratic
+    action without independent kinetic terms in the regime
+    $R\ell_\chi^2 \ll 1$.
+    They are therefore non-dynamical and can be eliminated algebraically.
+
+    The only sector acquiring a propagating kinetic operator is the
+    transverse-traceless tensor sector $h^{\mathrm{TT}}_{ij}$.
+
+  \subsection{Transverse-Traceless Sector}
+    \label{subsec:transverse-traceless-sector}
+
+    Restricting to $h^{\mathrm{TT}}_{\mu\nu}$,
+    the quadratic operator reduces to
+    \[
+      \left(
+        c_{\mathrm{EH}}\Box
+        +
+        \beta \Box^2
+      \right)
+      h^{\mathrm{TT}}_{\mu\nu}
+      =
+      0.
+    \]
+
+    Factoring gives
+    \[
+      \Box
+      \left(
+        1
+        +
+        \frac{\beta}{c_{\mathrm{EH}}}
+        \Box
+      \right)
+      h^{\mathrm{TT}}_{\mu\nu}
+      =
+      0.
+    \]
+
+    The first factor corresponds to the standard massless graviton pole
+    $k^2=0$.
+    The second factor introduces an additional pole at
+    \[
+      k^2
+      =
+      -\frac{c_{\mathrm{EH}}}{\beta}
+      \sim
+      \ell_\chi^{-2}.
+    \]
+
+    Since $\ell_\chi^{-1}$ sets the pre-geometric ultraviolet scale,
+    this excitation lies outside the infrared window
+    \[
+      \omega \ll \ell_\chi^{-1},
+    \]
+    relevant to gravitational-wave observations.
+
+  \subsection{Infrared Propagation Theorem}
+    \label{subsec:infrared-propagation-theorem}
+
+    \paragraph{Proposition.}
+      In the regime $R\ell_\chi^2 \ll 1$ and $\omega \ll \ell_\chi^{-1}$,
+      the Lorentzian spectral action propagates exactly two transverse-traceless tensor modes of helicity $\pm 2$.
+      No scalar or vector propagating degree of freedom is dynamically accessible in this domain.
+
+    \paragraph{Proof.}
+      The SVT decomposition shows that scalar and vector components lack
+      independent kinetic operators in harmonic gauge.
+      The tensor sector obeys a fourth-order equation that factorizes into two second-order operators.
+      The additional pole is located at $k^2 \sim \ell_\chi^{-2}$, hence outside the infrared regime.
+      Only the massless pole contributes to low-frequency propagation.
+      \hfill $\square$
+
+\subsection{Polarization Content}
+  \label{subsec:polarization-content}
+
+  The surviving infrared excitations are precisely the two helicity $\pm 2$ tensor modes of general relativity.
+  No scalar (breathing or longitudinal) or vector polarizations appear in the accessible frequency range.
+  The Lorentzian completion of the spectral framework is therefore
+  consistent with current gravitational-wave polarization constraints.

@@ -1,0 +1,144 @@
+\section{Lorentzian Completion of the Spectral Entropy Functional}
+  \label{sec:lorentzian_completion}
+
+  \subsection{From Elliptic to Hyperbolic Dynamics}
+    \label{subsec:from-elliptic-to-hyperbolic-dynamics}
+
+    In the Riemannian formulation developed previously, the spectral entropy
+    functional is defined by
+    \[
+      S_\Pi[g]
+      =
+      \frac12 \log \det{}' A_g,
+    \]
+    where $A_g$ is a Laplace-type elliptic operator.
+    Its renormalized first variation generates an infrared Einstein response,
+    with higher-derivative corrections governed by the Seeley--DeWitt
+    coefficients.
+
+    While this formulation captures the static and quasi-static structure
+    of the emergent geometry, it does not address causal propagation.
+    In particular, $A_g$ is elliptic and therefore encodes spatial
+    correlation structure rather than hyperbolic time evolution.
+    To describe gravitational waves and dynamical perturbations,
+    a Lorentzian completion is required.
+
+    We therefore introduce a hyperbolic operator
+    $\mathcal{D}_g$
+    such that its spatial restriction on constant-time slices reduces to $A_g$.
+    In a $3+1$ decomposition with lapse $N$ and shift $N^i$,
+    the d'Alembertian reads
+    \[
+      \Box_g
+      =
+      -\frac{1}{N^2}
+      (\partial_t - \mathcal{L}_{\vec N})^2
+      +
+      \Delta_\gamma
+      +
+      \text{(connection terms)},
+    \]
+    where $\Delta_\gamma$ is the Laplacian on spatial slices.
+    In the quasi-static regime $N \simeq 1$, $N^i \simeq 0$, and for slowly varying extrinsic curvature, one recovers
+    \[
+      \Box_g
+      \;\longrightarrow\;
+      -\partial_t^2 + \Delta_\gamma.
+    \]
+    The elliptic operator $A_g$ of the Riemannian theory is thus identified
+    with the spatial block of the Lorentzian operator.
+
+  \subsection{Definition of the Lorentzian Spectral Action}
+    \label{subsec:definition-of-the-lorentzian-spectral-action}
+
+    The Lorentzian completion of the spectral entropy functional is defined as
+    \[
+      S_\Pi^{(L)}[g]
+      =
+      \frac12 \Re \log \det{}' \mathcal{D}_g.
+    \]
+    Equivalently, one may formulate the theory using a
+    Schwinger--Keldysh contour prescription,
+    so that the inverse operator entering functional variations is the
+    retarded Green operator $G_R$.
+
+    This choice ensures:
+
+    \begin{itemize}
+      \item Reality of the quadratic kernel.
+      \item Causal propagation, i.e.\ $G_R(x,y)=0$ for $x \notin J^+(y)$.
+      \item Consistency with classical gravitational-wave dynamics.
+    \end{itemize}
+
+    The operator $\mathcal{D}_g$ is assumed to be globally hyperbolic and
+    normally hyperbolic in the sense of Lorentzian geometry, so that
+    retarded and advanced Green operators exist and are unique.
+
+  \subsection{Second Variation and Quadratic Operator}
+    \label{subsec:second-variation-and-quadratic-operator}
+
+    The second variation of the Lorentzian spectral action takes the
+    operatorial form
+    \[
+      \delta^2 S_\Pi^{(L)}
+      =
+      \frac12
+      \mathrm{Tr}
+      \left(
+        G_R \,\delta^2 \mathcal{D}_g
+      \right)
+      -
+      \frac12
+      \mathrm{Tr}
+      \left(
+        G_R \,\delta \mathcal{D}_g\,
+        G_R \,\delta \mathcal{D}_g
+      \right).
+    \]
+
+    This expression is the hyperbolic analogue of the elliptic formula derived previously.
+    The replacement $A_g^{-1} \to G_R$ is the essential modification ensuring causal structure.
+
+    Expanding about Minkowski spacetime,
+    \[
+      g_{\mu\nu}
+      =
+      \eta_{\mu\nu}
+      +
+      h_{\mu\nu},
+    \]
+    one obtains a quadratic operator of the schematic form
+    \[
+      \mathcal{O}
+      =
+      c_{\mathrm{EH}} \Box
+      +
+      \beta \Box^2
+      +
+      \text{(non-local terms)}
+      +
+      \mathcal{O}(R\ell_\chi^2).
+    \]
+
+    In the infrared regime $R\ell_\chi^2 \ll 1$, the dominant local contributions are the Einstein term and the
+    Weyl-squared (Bach) correction.
+    Non-local contributions are suppressed by additional powers of
+    $\ell_\chi^2$ and are analytic in $\Box$ at low frequency.
+
+  \subsection{Infrared Consistency}
+    \label{subsec:infrared-consistency}
+
+    The structure above guarantees that:
+
+    \begin{enumerate}
+      \item The leading kinetic operator is hyperbolic and luminal.
+      \item Higher-derivative corrections introduce an additional pole at $k^2 \sim \ell_\chi^{-2}$.
+      \item In the domain $\omega \ll \ell_\chi^{-1}$,
+      the additional excitation decouples,
+      leaving a standard massless graviton sector.
+    \end{enumerate}
+
+    The Lorentzian completion therefore preserves the infrared Einstein
+    limit while embedding it in a fully causal framework.
+    Subsequent sections analyze the propagating degrees of freedom and
+    derive the resulting modified dispersion relation.
