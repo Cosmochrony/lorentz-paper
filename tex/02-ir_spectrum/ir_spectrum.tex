@@ -157,3 +157,90 @@
   No scalar (breathing or longitudinal) or vector polarizations appear in the accessible frequency range.
   The Lorentzian completion of the spectral framework is therefore
   consistent with current gravitational-wave polarization constraints.
+
+  \subsection{Sourced Vector Sector and the Gravitomagnetic Constraint}
+    \label{subsec:sourced-vector-sector}
+
+    The propagation theorem classifies the vector sector $h_{0i}$ as non-dynamical in the infrared.
+    This is a statement about free propagation in vacuum, not a statement that the sector vanishes:
+    an algebraically eliminated sector becomes a \emph{constraint} sector as soon as a source is present.
+    We make this explicit by coupling the linearized operator to a projected stress tensor $T^{(\Pi)}_{\mu\nu}$,
+    and we keep every conclusion below conditional on its momentum-density component $T^{(\Pi)}_{0i}$, whose
+    microscopic construction from moving projected configurations belongs to the matter sector and is not
+    attempted here.
+
+    \paragraph{Sourced field equation.}
+      Adding the minimal coupling $\half\!\int h_{\mu\nu}\,T^{(\Pi)\,\mu\nu}\,\dd^4 x$ to the quadratic action and
+      extremizing in harmonic gauge gives, with the Einstein normalization
+      $c_{\mathrm{EH}} = (16\pi G_{\mathrm{N}})^{-1}$ inherited from the infrared Einstein response,
+      \[
+        \Box\,\bar h_{\mu\nu} = -16\pi G_{\mathrm{N}}\, T^{(\Pi)}_{\mu\nu}.
+      \]
+      The $0i$ components isolate the vector sector,
+      \[
+        \boxed{\;\Box\,\bar h_{0i} = -16\pi G_{\mathrm{N}}\, T^{(\Pi)}_{0i}\;}
+      \]
+      which carries no second-order time derivative once the harmonic constraint is imposed.
+
+    \paragraph{Stationary reduction.}
+      Frame dragging is a stationary effect, sourced by a slowly rotating mass current, so $\partial_t \to 0$ and
+      $\Box \to \nabla^2$.
+      Writing the gravitomagnetic potential $A^{\mathrm{g}}_i \equiv -\tfrac14\,\bar h_{0i}$ and the mass current
+      $j^{\mathrm{g}}_i \equiv T^{(\Pi)}_{0i}$, the momentum density $\rho\,v_i$ for dust, one obtains the vector
+      Poisson equation
+      \[
+        \nabla^2 A^{\mathrm{g}}_i = 4\pi G_{\mathrm{N}}\, j^{\mathrm{g}}_i,
+      \]
+      structurally identical to magnetostatics $\nabla^2 \mathbf{A} = -\mu_0\,\mathbf{j}$.
+      Its Green-function solution is
+      \[
+        \mathbf{A}^{\mathrm{g}}(\mathbf{x})
+        = -G_{\mathrm{N}} \int \frac{\mathbf{j}^{\mathrm{g}}(\mathbf{x}')}{|\mathbf{x}-\mathbf{x}'|}\,\dd^3 x',
+        \qquad
+        \mathbf{B}^{\mathrm{g}} = \nabla \times \mathbf{A}^{\mathrm{g}},
+      \]
+      and for a source of angular momentum $\mathbf{J}$ the multipole expansion yields the dipolar
+      Lense--Thirring potential and the associated precession.
+      This last identification is a reproduction of linearized general relativity and carries no discriminating
+      power: the framework reproduces general relativity in its domain of validity, so the measured frame dragging
+      around the Earth is consistent with, but does not single out, the present construction.
+
+    \paragraph{Consistency with the propagation theorem.}
+      In the stationary regime the boxed equation is elliptic, a constraint, not a hyperbolic propagation law.
+      This is precisely the content of the statement that the vector sector is non-dynamical in the infrared:
+      the propagation theorem is used here, not bypassed.
+      It guarantees the absence of a free vector mode, so that $\bar h_{0i}$ is fixed entirely by the source.
+      The two helicity-$\pm2$ tensor modes propagate, while the vector sector is a sourced constraint, and the
+      gravitomagnetic field is therefore determined without any additional degree of freedom.
+
+    \paragraph{Inherited spectral correction.}
+      Retaining the subleading operator $\beta\Box^2$ of the quadratic action, the stationary vector constraint
+      becomes
+      \[
+        \Bigl(\nabla^2 + \tfrac{\beta}{c_{\mathrm{EH}}}\,\nabla^4\Bigr)\bar h_{0i}
+        = -16\pi G_{\mathrm{N}}\, T^{(\Pi)}_{0i},
+        \qquad
+        \frac{\beta}{c_{\mathrm{EH}}} = -\gamma\,\ell_\chi^2,
+        \quad \gamma = \frac{1}{180\,\zeta},
+      \]
+      where $\beta/c_{\mathrm{EH}}$ is the same ratio of Seeley--DeWitt coefficients that fixes the $k^4$
+      dispersion correction of the transverse-traceless sector (\cref{sec:dispersion}).
+      The gravitomagnetic potential thus inherits a short-range correction of range $\sim\ell_\chi$, twin to the
+      dispersion correction of the propagating modes.
+      To our knowledge this is the only place where the gravitomagnetic sector would carry a framework-specific
+      imprint rather than reproduce general relativity, and it is therefore the natural candidate for a
+      discriminating statement, to be handled with the usual caution about magnitude.
+      Its status is structural, conditional on extending the vacuum analysis of
+      \cref{subsec:infrared-propagation-theorem} to the sourced vector sector, and it is not yet phenomenologically
+      evaluated.
+
+    \paragraph{Status and localization of the gap.}
+      Conditional on a supplied $T^{(\Pi)}_{0i}$, the reduction above fixes the gravitomagnetic component $g_{0i}$
+      exactly as in linearized general relativity: the downstream step is structurally closed and introduces no new
+      hypothesis.
+      The open part is upstream, namely the construction of $T^{(\Pi)}_{0i}$ from moving projected matter
+      configurations, which is the projected momentum density of the matter sector and remains an open deliverable
+      of the gravitational programme.
+      The derivation therefore does not close that gap; it localizes it entirely upstream, showing that the
+      gravitomagnetic sector has no intrinsic difficulty of its own, only a dependence on the projected matter
+      current.
