@@ -1,5 +1,5 @@
 This repository contains the source of the  
-[paper on causal propagation and gravitational waves from projective spectral dynamics](pdf/Lorentz.pdf)  
+[paper on causal propagation and gravitational waves from projective spectral dynamics](out/Lorentz.pdf)  
 (paper III de gravity / Lorentzian completion of the spectral entropy framework).
 
 This work develops the **Lorentzian and causal completion** of the spectral entropy
@@ -125,7 +125,7 @@ paper/
 
 ## Links
 
-- 📄 [Paper PDF](https://github.com/Cosmochrony/lorentz-paper/blob/main/pdf/Lorentz.pdf)
+- 📄 [Paper PDF](https://github.com/Cosmochrony/lorentz-paper/blob/main/out/Lorentz.pdf)
 - 🌐 Website: [cosmochrony.org](https://cosmochrony.org)
 
 ## Citation
