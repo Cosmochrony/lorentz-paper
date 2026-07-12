@@ -1,6 +1,6 @@
-This repository contains the source of the  
-[paper on causal propagation and gravitational waves from projective spectral dynamics](out/Lorentz.pdf)  
-(paper III de gravity / Lorentzian completion of the spectral entropy framework).
+This repository contains the source of the paper on causal propagation and gravitational waves from projective 
+spectral dynamics  
+(paper III of gravity / Lorentzian completion of the spectral entropy framework).
 
 This work develops the **Lorentzian and causal completion** of the spectral entropy
 program, extending the elliptic (Riemannian) formulation in which the renormalized
