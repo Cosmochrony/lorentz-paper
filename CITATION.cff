@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you cite this work, please use the metadata from this file."
+title: "Causal Propagation and Gravitational Waves from Projective Spectral Dynamics"
+type: software
+authors:
+  - family-names: "Beau"
+    given-names: "Jérôme"
+repository-code: "https://github.com/Cosmochrony/lorentz-paper"
+url: "https://cosmochrony.org/science/spectral-gravity/lorentz/"
+doi: "10.5281/zenodo.18826644"
+license: "CC-BY-4.0"
+preferred-citation:
+  type: article
+  title: "Causal Propagation and Gravitational Waves from Projective Spectral Dynamics"
+  authors:
+    - family-names: "Beau"
+      given-names: "Jérôme"
+  year: 2026
+  doi: "10.5281/zenodo.18826644"
+  url: "https://doi.org/10.5281/zenodo.18826644"
