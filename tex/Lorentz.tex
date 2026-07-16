@@ -72,8 +72,8 @@
   statements. The transverse-traceless calculation alone does not establish the full massive spin-$2$ multiplet,
   since the remaining sectors are not treated here; the resemblance to quadratic gravity is a comparison, not an
   identification.
-  The finite values of $\cEH^{\mathrm{ren}}$ and $\beta^{\mathrm{ren}}$, the pole mass, and the presence of a
-  massive scalar from the $R^2$ sector are matching data.
+  The finite values of $\cEH^{\mathrm{ren}}$ and $\beta^{\mathrm{ren}}$, the signed mass squared $m_2^2$, and the
+  presence of a massive scalar from the $R^2$ sector are matching data.
 
   \textbf{Interpretive status.}
   This is a negative result about a posited truncation, and its scope is exactly that.
@@ -298,15 +298,20 @@
     \begin{remark}[Status of $\cEH^{\mathrm{ren}}$ and $\beta^{\mathrm{ren}}$]
       \label{rem:matching}
       The Seeley--DeWitt coefficient $a_4$ controls a logarithmic contribution to the running of the
-      four-derivative couplings. It does not fix the finite value of $\beta^{\mathrm{ren}}$, which depends in
-      addition on the overall normalization and sign of the determinant and on the renormalization prescription.
-      An identification $\beta = -2\alpha_C$ read off the Weyl-squared part of $a_4$ omits all three, and is not
-      a determination of $\beta^{\mathrm{ren}}$.
+      four-derivative couplings. It does not fix the finite value of $\beta^{\mathrm{ren}}$.
 
-      The same holds for $\cEH^{\mathrm{ren}}$: its finite value and sign are fixed by a renormalization
-      condition together with the complete operator content~\cite{Vassilevich2003}. Consequently the pole mass
-      $\cEH^{\mathrm{ren}}/\beta^{\mathrm{ren}}$ of Section~\ref{sec:poles} is a matching datum, and is not
-      derivably tied to $\ell_\chi$.
+      The normalization and sign of $\tfrac12\log\det{}'\Ag$ are not at issue: they are fixed by the definition of
+      the functional. What leaves $\beta^{\mathrm{ren}}$ undetermined is the finite parts of the counterterms, the
+      complete operator content, the continuation to Lorentzian signature, and the renormalization
+      condition~\cite{Vassilevich2003}. An identification $\beta = -2\alpha_C$ read off the Weyl-squared part of
+      $a_4$ supplies none of these, and is not a determination of $\beta^{\mathrm{ren}}$.
+
+      The same holds for $\cEH^{\mathrm{ren}}$. Consequently the signed mass squared
+      \[
+        m_2^2 = -\,\frac{\cEH^{\mathrm{ren}}}{\beta^{\mathrm{ren}}}
+      \]
+      of Section~\ref{sec:poles} --- equivalently the pole scale $|\cEH^{\mathrm{ren}}/\beta^{\mathrm{ren}}|$
+      together with its sign --- is a matching datum, and is not derivably tied to $\ell_\chi$.
     \end{remark}
 
   \section{Open problems}
@@ -332,25 +337,35 @@
   \section{Conclusion}
     \label{sec:conclusion}
 
-    Within the local covariant four-derivative truncation of the transverse-traceless sector, and for
-    $\cEH \neq 0$, the solution space is the direct sum of a massless and a massive sector. The massless sector is
-    undeformed: its dispersion is $\omega^2 = |\vec k|^2$ with no correction at any order in $|\vec k|$. No quartic
-    deformation of the graviton dispersion follows, hence no $A_4$ coefficient, and no bound on $\ell_\chi$ from
-    gravitational-wave dispersion data.
+    Under the posited kernel of Definition~\ref{def:truncation}, and for $\cEH \neq 0$, the solution space is the
+    direct sum $\ker\Box \oplus \ker(\cEH + \beta\Box)$; the second summand is a massive sector when
+    $\beta \neq 0$, and trivial otherwise. The massless summand is undeformed: its dispersion is
+    $\omega^2 = |\vec k|^2$ with no correction at any order in $|\vec k|$.
 
-    The accompanying pole is a ghost by virtue of its residue, and tachyonic or not according to the sign of
-    $\cEH/\beta$ --- two distinct statements. Its mass, the finite coefficients that fix it, and whether an $R^2$
-    scalar joins it are matching data supplied from outside the truncation.
+    No quartic deformation of the graviton dispersion follows, hence $A_4 = 0$ on the massless branch and no
+    mapping $A_4 \leftrightarrow \ell_\chi$. Any bound on $\ell_\chi$ resting on that identification does not
+    hold. This does not exhaust the catalogue: the $\alpha = 0$ sector of~\eqref{eq:lvk} bears on massive
+    branches, and constraining the pole of Section~\ref{sec:poles} through it would require the inputs listed in
+    Remark~\ref{rem:not-claimed}. The negative result concerns the $A_4$ route.
+
+    For $\beta \neq 0$ the accompanying pole is a ghost by virtue of its residue, and tachyonic or not according
+    to the sign of $\cEH/\beta$ --- two distinct statements. What is established is a helicity-$2$ pole in the
+    transverse-traceless sector; the five-polarization massive spin-$2$ multiplet of quadratic gravity is a
+    comparison, not a conclusion, since the scalar and vector sectors are untreated. Its signed mass squared, the
+    finite coefficients that fix it, and whether an $R^2$ scalar joins it are matching data supplied from outside
+    the truncation.
 
     \subsection{Interpretive outlook}
       \label{subsec:outlook}
 
       \textbf{Interpretation, not derived result.}
-      The truncation lands on the known pole content of quadratic gravity. It is tempting to read that agreement
-      as support for the spectral construction; the reading is available but weak, since any construction
-      generating $C^2$ and $R^2$ sectors would agree equally well. The defensible statement is narrower: the
-      truncation is compatible with the known infrared structure and predicts nothing beyond it that is presently
-      observable.
+      The transverse-traceless sector of the posited kernel resembles that of quadratic gravity. It is
+      tempting to read that resemblance as support for the spectral construction; the reading is available
+      but weak, since any
+      construction generating $C^2$ and $R^2$ sectors would resemble it equally well --- and the resemblance is
+      established here only for one helicity-$2$ pole, not for the full mode content. The defensible statement is
+      narrower: the posited kernel is compatible with the known infrared structure and predicts nothing beyond it
+      that is presently observable.
 
       What this note contributes is a boundary. Several inputs are missing before gravitational waves can test
       this framework at all, and they are not interchangeable: a Lorentzian construction from which the kernel of
