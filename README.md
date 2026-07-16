@@ -1,4 +1,4 @@
-This repository contains the source of **Correction: No Quartic Graviton Dispersion from the Covariant Spectral
+This repository contains the source of **No Quartic Graviton Dispersion from the Covariant Spectral
 Operator** (paper III of gravity / Lorentzian completion of the spectral entropy framework).
 
 This is a **correction**. It determines the linearized infrared spectrum supported by the covariant spectral
@@ -136,7 +136,7 @@ paper/
 
 If you reference this work, please cite:
 
-> J. Beau, *Correction: No Quartic Graviton Dispersion from the Covariant Spectral Operator*, 2026.
+> J. Beau, *No Quartic Graviton Dispersion from the Covariant Spectral Operator*, 2026.
 > [doi:10.5281/zenodo.18826644](https://doi.org/10.5281/zenodo.18826644)
 
 ## Acknowledgements
