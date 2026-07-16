@@ -1,9 +1,10 @@
 \documentclass[12pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
-\usepackage{amsmath,amssymb,amsthm}
+\usepackage{lmodern}
 \input{glyphtounicode}
 \pdfgentounicode=1
+\usepackage{amsmath,amssymb,amsthm}
 \usepackage{mathtools}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
@@ -54,8 +55,11 @@
   conditional on the posit.
 
   When $\cEH \neq 0$ the two factors are coprime, and the solution space is the \emph{direct sum}
-  $\ker\Box \oplus \ker(\cEH + \beta\Box)$: every solution decomposes uniquely as a massless part plus a massive
-  part, and a generic solution satisfies neither factor equation on its own.
+  $\ker\Box \oplus \ker(\cEH + \beta\Box)$: every solution decomposes uniquely into a summand annihilated by
+  $\Box$ and a summand annihilated by $\cEH + \beta\Box$.
+  The second summand is a massive sector only when $\beta \neq 0$; for $\beta = 0$ it is trivial and the
+  decomposition degenerates to $\ker\Box$.
+  Whenever the second summand is nontrivial, a generic solution satisfies neither factor equation on its own.
   In units with $c = 1$ the massless summand obeys $\omega^2 = |\vec k|^2$ exactly, with no correction at any
   order in $|\vec k|$.
   A quartic deformation of the graviton dispersion is therefore not a consequence of this kernel.
@@ -79,6 +83,10 @@
 
   \noindent\textbf{Keywords:} Quadratic gravity, Graviton dispersion, Four-derivative truncation, Pole structure,
   Ghost residue, Renormalization matching, Heat-kernel expansion, Effective field theory
+
+  \clearpage
+  \tableofcontents
+  \newpage
 
   \section{The operator considered}
     \label{sec:setup}
@@ -155,8 +163,12 @@
 
     \begin{remark}[The kernel is not a union]
       \label{rem:not-union}
-      Let $\cEH \neq 0$ and $\beta \neq 0$, so that $\ker Q \neq \{0\}$. Then $\ker\OTT$ is \emph{strictly}
-      larger than $\ker P \cup \ker Q$: given nonzero $h_0 \in \ker P$ and $h_m \in \ker Q$, the sum
+      Let $\cEH \neq 0$, let $\beta \neq 0$, and suppose $\ker Q \neq \{0\}$ in $\mathcal{V}$. The last is a
+      hypothesis on $\mathcal{V}$ and not a consequence of $\beta \neq 0$: a stable space may fail to contain
+      solutions of $Q h = 0$. It holds, for instance, in the tempered distributions, where $\ker Q$ carries the
+      plane waves with $k^2 = \cEH/\beta$.
+      Then $\ker\OTT$ is \emph{strictly} larger than $\ker P \cup \ker Q$: given nonzero $h_0 \in \ker P$ and
+      $h_m \in \ker Q$, the sum
       $h_0 + h_m$ solves $\OTT h = 0$ while satisfying neither factor equation, since
       $\Box(h_0+h_m) = -(\cEH/\beta)h_m \neq 0$ and $(\cEH + \beta\Box)(h_0+h_m) = \cEH h_0 \neq 0$.
       A generic solution is a superposition of the two sectors, not a member of either.
@@ -241,10 +253,10 @@
     \label{sec:poles}
 
     Writing $z$ for the momentum-space image of $\Box$, the transverse-traceless propagator of~\eqref{eq:trunc}
-    is, for $\cEH \neq 0$,
+    is, for $\cEH \neq 0$ \emph{and} $\beta \neq 0$ --- the partial fractions below divide by $\beta$ ---
     \begin{equation}
       \frac{1}{z(\cEH + \beta z)}
-      = \frac{1}{\cEH}\left( \frac{1}{z} - \frac{1}{z + \cEH/\beta} \right).
+      = \frac{1}{\cEH\,z} \;-\; \frac{1}{\cEH\,(z + \cEH/\beta)} .
       \label{eq:partial}
     \end{equation}
 
