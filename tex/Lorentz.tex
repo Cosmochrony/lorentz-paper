@@ -1,6 +1,9 @@
 \documentclass[12pt,a4paper]{article}
 
+\usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
+\input{glyphtounicode}
+\pdfgentounicode=1
 \usepackage{mathtools}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
@@ -8,6 +11,15 @@
 \usepackage{cleveref}
 \usepackage{enumitem}
 \usepackage{doi}
+\hypersetup{
+  colorlinks=false,
+  pdfborder={0 0 0},
+  pdftitle={No Quartic Graviton Dispersion from the Local Covariant Four-Derivative Truncation},
+  pdfauthor={J\'{e}r\^{o}me Beau},
+  pdfsubject={Quadratic gravity; graviton dispersion; four-derivative truncation},
+  pdfkeywords={quadratic gravity, graviton dispersion, four-derivative truncation, pole structure,
+    ghost residue, renormalization matching}
+}
 
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
@@ -34,31 +46,35 @@
   \maketitle
 
   \abstract{
-  This note settles one question about the local covariant four-derivative truncation of the projective spectral
-  action: whether it deforms the dispersion of the graviton.
+  This note settles one question about a posited kernel: whether the local covariant four-derivative
+  transverse-traceless kernel $\OTT = \Box\,(\cEH + \beta\Box)$ deforms the dispersion of the graviton.
   It does not.
+  The kernel is an assumption, not a consequence of the projective spectral action: a Lorentzian counterpart of
+  that action requires an in-in construction on a closed time path, which is open. Every statement here is
+  conditional on the posit.
 
-  In the transverse-traceless sector the truncated quadratic operator factorizes as
-  $\OTT = \Box\,(\cEH + \beta\Box)$.
   When $\cEH \neq 0$ the two factors are coprime, and the solution space is the \emph{direct sum}
   $\ker\Box \oplus \ker(\cEH + \beta\Box)$: every solution decomposes uniquely as a massless part plus a massive
   part, and a generic solution satisfies neither factor equation on its own.
-  The massless summand obeys $\omega^2 = c^2k^2$ within the truncation, with no correction at any order in $k$.
-  A quartic deformation $\omega^2 = c^2k^2 - \gamma\,\ell_\chi^2k^4$ of the graviton dispersion is therefore not a
-  consequence of this operator, and there is no mapping onto the $A_4$ parametrization used in gravitational-wave
-  catalogues, hence no bound on $\ell_\chi$ from interferometric dispersion data.
+  In units with $c = 1$ the massless summand obeys $\omega^2 = |\vec k|^2$ exactly, with no correction at any
+  order in $|\vec k|$.
+  A quartic deformation of the graviton dispersion is therefore not a consequence of this kernel.
+  It follows that no coefficient of a quartic deformation is induced, hence no mapping of such a coefficient onto
+  the pre-geometric scale $\ell_\chi$, and any bound on $\ell_\chi$ resting on that mapping does not hold.
 
-  The second factor supplies a pole with residue opposite to the massless one --- the ghost character, which is
-  independent of the sign of $\cEH/\beta$ --- located at a mass squared whose sign, and therefore whether it is
-  also tachyonic, is a separate question. This is the known content of quadratic gravity.
+  For $\beta \neq 0$ the second factor supplies a helicity-$2$ pole at $m_2^2 = -\cEH/\beta$ whose residue is
+  opposite to the massless one. The opposite residue is the ghost character and is independent of the sign of
+  $\cEH/\beta$; that sign fixes $m_2^2$ and hence whether the pole is also tachyonic. These are two distinct
+  statements. The transverse-traceless calculation alone does not establish the full massive spin-$2$ multiplet,
+  since the remaining sectors are not treated here; the resemblance to quadratic gravity is a comparison, not an
+  identification.
   The finite values of $\cEH^{\mathrm{ren}}$ and $\beta^{\mathrm{ren}}$, the pole mass, and the presence of a
-  massive scalar from the $R^2$ sector are matching data, not outputs of the truncation.
+  massive scalar from the $R^2$ sector are matching data.
 
   \textbf{Interpretive status.}
-  This is a negative result about a truncation, and its scope is exactly that.
-  It removes a putative interferometric handle on the pre-geometric scale and isolates what a genuine one would
-  require: a condition fixing the pole mass, and an observable sensitive to a massive companion rather than to a
-  deformed massless branch.
+  This is a negative result about a posited truncation, and its scope is exactly that.
+  It removes a putative interferometric handle on $\ell_\chi$ and isolates what a genuine one would require ---
+  beginning with a Lorentzian construction from which the kernel actually follows.
   }
 
   \noindent\textbf{Keywords:} Quadratic gravity, Graviton dispersion, Four-derivative truncation, Pole structure,
@@ -67,45 +83,54 @@
   \section{The operator considered}
     \label{sec:setup}
 
-    The projective spectral action assigns to a metric the renormalized functional
+    The projective spectral action assigns to a Riemannian metric the renormalized functional
     \[
       \Spi[g] = \tfrac12\log\det{}'\Ag .
     \]
-    Its metric variation carries a local Einstein term together with higher-derivative local terms, non-local
-    form factors, and contributions of higher order in $\Box$.
+    A Lorentzian counterpart of this functional is not available: obtaining one requires an in-in construction on
+    a closed time path, which is open (Section~\ref{sec:open}). The Lorentzian transverse-traceless kernel is
+    therefore \emph{posited} here, not derived, and everything below is conditional on that posit.
 
-    This note concerns a truncation of that structure, and the truncation is an assumption, not a result.
-
-    \begin{definition}[Local covariant four-derivative TT truncation]
+    \begin{definition}[The posited kernel]
       \label{def:truncation}
-      Linearize about Minkowski spacetime and restrict to the transverse-traceless sector. Retain the local terms
-      of the quadratic form up to four derivatives, and discard the non-local form factors and all terms of order
-      $\Box^3$ and higher. The resulting operator is
+      Assume that, linearized about Minkowski spacetime and restricted to the transverse-traceless sector, the
+      local Lorentzian quadratic kernel truncated at four derivatives is
       \begin{equation}
         \OTT = \cEH\,\Box + \beta\,\Box^2 ,
         \label{eq:trunc}
       \end{equation}
-      with $\cEH$ and $\beta$ constants.
+      with $\cEH$ and $\beta$ real constants. Non-local form factors and all terms of order $\Box^3$ and higher
+      are discarded.
     \end{definition}
 
-    Every statement below is a statement about~\eqref{eq:trunc}. None of them is a statement about the full
-    renormalized kernel, and the difference matters wherever the discarded terms are not negligible --- in
-    particular in the ultraviolet.
+    The results below therefore have the form: \emph{if} the local Lorentzian transverse-traceless kernel is
+    $\Box(\cEH + \beta\Box)$, \emph{then} the stated conclusions follow. They are not statements about
+    $\Spi$ itself, nor about the full renormalized kernel, and the difference matters wherever the discarded
+    terms are not negligible --- in particular in the ultraviolet.
+
+    \paragraph{Conventions.}
+      We use signature $(-,+,+,+)$ and units with $c = 1$. For a plane wave $e^{ik\cdot x}$ with
+      $k^\mu = (\omega, \vec k)$ we have $\Box \to -k^2$, where $k^2 = k^\mu k_\mu = -\omega^2 + |\vec k|^2$.
 
   \section{Solution structure}
     \label{sec:structure}
 
     Write $P = \Box$ and $Q = \cEH + \beta\Box$, so that $\OTT = PQ = QP$.
 
+    Let $\mathcal{V}$ be any complex vector space of transverse-traceless tensor fields on which $\Box$ acts and
+    which is stable under it --- smooth fields, or tempered distributions, indifferently. All kernels below are
+    taken in $\mathcal{V}$. The argument is algebraic and uses no property of $\mathcal{V}$ beyond stability.
+
     \begin{proposition}[Direct-sum decomposition]
       \label{prop:decomposition}
-      Let $\cEH \neq 0$. Then
+      Let $\cEH \neq 0$. Then, in $\mathcal{V}$,
       \begin{equation}
         \ker \OTT \;=\; \ker P \,\oplus\, \ker Q ,
         \label{eq:directsum}
       \end{equation}
-      and the decomposition of any $\hTT \in \ker\OTT$ is unique:
-      $\hTT = h_0 + h_m$ with $\Box h_0 = 0$ and $\Box h_m = -(\cEH/\beta)\,h_m$.
+      and the decomposition of any $\hTT \in \ker\OTT$ as $\hTT = h_0 + h_m$ with $h_0 \in \ker P$ and
+      $h_m \in \ker Q$ is unique.
+      If in addition $\beta \neq 0$, then $\ker Q$ is characterized by $\Box h_m = -(\cEH/\beta)\,h_m$.
     \end{proposition}
 
     \begin{proof}
@@ -130,10 +155,15 @@
 
     \begin{remark}[The kernel is not a union]
       \label{rem:not-union}
-      $\ker\OTT$ is strictly larger than $\ker P \cup \ker Q$. Given any nonzero $h_0 \in \ker P$ and
-      $h_m \in \ker Q$, the sum $h_0 + h_m$ solves $\OTT h = 0$ while satisfying neither factor equation:
+      Let $\cEH \neq 0$ and $\beta \neq 0$, so that $\ker Q \neq \{0\}$. Then $\ker\OTT$ is \emph{strictly}
+      larger than $\ker P \cup \ker Q$: given nonzero $h_0 \in \ker P$ and $h_m \in \ker Q$, the sum
+      $h_0 + h_m$ solves $\OTT h = 0$ while satisfying neither factor equation, since
       $\Box(h_0+h_m) = -(\cEH/\beta)h_m \neq 0$ and $(\cEH + \beta\Box)(h_0+h_m) = \cEH h_0 \neq 0$.
-      A generic solution is therefore a superposition of the two sectors, not a member of one of them.
+      A generic solution is a superposition of the two sectors, not a member of either.
+
+      For $\beta = 0$ the operator reduces to $\cEH\Box$ and $\ker Q = \{0\}$: equation~\eqref{eq:directsum}
+      still holds, trivially, and the union coincides with the kernel. The strictness above is a statement about
+      $\beta \neq 0$.
     \end{remark}
 
     \begin{remark}[The degenerate case]
@@ -148,14 +178,14 @@
 
     \begin{corollary}[Undeformed massless sector]
       \label{cor:no-k4}
-      Let $\cEH \neq 0$. Within the truncation~\eqref{eq:trunc}, the massless summand of
+      Let $\cEH \neq 0$. Under Definition~\ref{def:truncation}, the massless summand of
       Proposition~\ref{prop:decomposition} satisfies $\Box h_0 = 0$ exactly, hence for plane waves
-      $h_0 \sim e^{ik\cdot x}$,
+      $h_0 \sim e^{ik\cdot x}$ one has $k^2 = 0$, i.e.
       \begin{equation}
-        \omega^2 = c^2 k^2 ,
+        \omega^2 = |\vec k|^2 ,
         \label{eq:massless}
       \end{equation}
-      with no correction at any order in $k$.
+      with no correction at any order in $|\vec k|$.
     \end{corollary}
 
     \begin{proof}
@@ -165,20 +195,39 @@
 
     \begin{remark}[Why no quartic term appears]
       \label{rem:why}
-      A relation $\omega^2 = c^2k^2 - \gamma\,\ell_\chi^2k^4 + \mathcal{O}(k^6)$ describes a single branch whose
-      massless dispersion is deformed at quartic order. The truncation has no such branch. Expanding
-      $(1 + (\beta/\cEH)\Box)^{-1}$ in powers of $\Box$ rearranges the residues of the propagator; it does not
-      move the zero of $\Box$, which is where the massless pole sits. The quartic coefficient obtained that way is
-      an artefact of treating a two-pole propagator as one deformed pole.
+      A relation $\omega^2 = |\vec k|^2 - \gamma\,\ell_\chi^2|\vec k|^4 + \mathcal{O}(|\vec k|^6)$ describes a
+      single branch whose massless dispersion is deformed at quartic order. The kernel~\eqref{eq:trunc} has no
+      such branch. Expanding $(\cEH + \beta z)^{-1}$ in powers of $z$ about $z = 0$ generates a series of terms
+      analytic at the origin --- contact terms, in position space --- added to the massless pole; it does not
+      move that pole, whose location is the zero of $\Box$ and is independent of $\beta$. Reading the resulting
+      series as a deformed dispersion relation mistakes an analytic background for a shift of the pole.
     \end{remark}
 
-    \begin{corollary}[No interferometric dispersion bound]
+    Gravitational-wave catalogues test modified dispersion through the phenomenological
+    relation~\cite{LIGO2019Dispersion}
+    \begin{equation}
+      E^2 = p^2c^2 + A_\alpha\,p^\alpha c^\alpha ,
+      \label{eq:lvk}
+    \end{equation}
+    constraining $A_\alpha$ for a range of exponents $\alpha$. The case $\alpha = 4$ is what a quartic deformation
+    of the massless branch would populate; the case $\alpha = 0$ corresponds instead to a mass term, so the
+    parametrization is not blind to massive branches.
+
+    \begin{corollary}[No quartic coefficient, hence no scale bound through $\alpha=4$]
       \label{cor:no-bound}
-      Gravitational-wave catalogues constrain $\omega^2 = c^2k^2 + A_4k^4$ on the propagating
-      graviton~\cite{LIGO2019Dispersion}. By Corollary~\ref{cor:no-k4} the truncation induces no such $A_4$.
-      There is consequently no mapping of this construction onto that parametrization, and no bound on $\ell_\chi$
-      from interferometric dispersion data.
+      Under Definition~\ref{def:truncation} with $\cEH \neq 0$, Corollary~\ref{cor:no-k4} gives $A_4 = 0$ on the
+      massless branch. There is therefore no mapping $A_4 \leftrightarrow \ell_\chi$, and any bound on $\ell_\chi$
+      obtained by identifying an interferometric limit on $A_4$ with a quartic spectral coefficient does not hold.
     \end{corollary}
+
+    \begin{remark}[What is \emph{not} claimed]
+      \label{rem:not-claimed}
+      Corollary~\ref{cor:no-bound} does not say that these data cannot constrain this framework. The
+      $\alpha = 0$ sector of~\eqref{eq:lvk} bears on massive branches, and the pole of Section~\ref{sec:poles} is
+      one. Turning that into an actual constraint would require its mass, its coupling to the detector, and its
+      excitation in the source --- none of which is supplied here (Section~\ref{sec:matching}). The negative
+      result concerns the $A_4$ route only.
+    \end{remark}
 
     \begin{remark}[No front-velocity claim]
       \label{rem:front}
@@ -210,8 +259,18 @@
             separate question from~(i) and has a separate answer.
     \end{enumerate}
 
-    This is the standard pole content of quadratic gravity: a massless graviton accompanied by a massive spin-2
-    ghost~\cite{Stelle1977,Calmet2017}. The truncation reproduces a known structure.
+    For $\beta \neq 0$ the second pole sits at $k^2 = \cEH/\beta$, that is at
+    \begin{equation}
+      m_2^2 = -\,\frac{\cEH}{\beta} ,
+      \label{eq:mass}
+    \end{equation}
+    in the conventions of Section~\ref{sec:setup}.
+
+    This resembles the pole content of quadratic gravity, where a massless graviton is accompanied by a massive
+    spin-$2$ ghost~\cite{Stelle1977,Calmet2017}. The resemblance is a comparison and not an identification: the
+    transverse-traceless calculation establishes a helicity-$2$ pole with opposite residue, whereas the massive
+    spin-$2$ multiplet is a statement about all five polarizations. The scalar and vector sectors are not treated
+    here (Section~\ref{sec:open}), so the full multiplet structure is not established.
 
     \begin{remark}[The scalar sector is not settled]
       \label{rem:scalar}
@@ -263,7 +322,7 @@
 
     Within the local covariant four-derivative truncation of the transverse-traceless sector, and for
     $\cEH \neq 0$, the solution space is the direct sum of a massless and a massive sector. The massless sector is
-    undeformed: its dispersion is $\omega^2 = c^2k^2$ with no correction at any order in $k$. No quartic
+    undeformed: its dispersion is $\omega^2 = |\vec k|^2$ with no correction at any order in $|\vec k|$. No quartic
     deformation of the graviton dispersion follows, hence no $A_4$ coefficient, and no bound on $\ell_\chi$ from
     gravitational-wave dispersion data.
 
@@ -281,9 +340,12 @@
       truncation is compatible with the known infrared structure and predicts nothing beyond it that is presently
       observable.
 
-      What this note contributes is a boundary. Two inputs must be supplied before gravitational waves can test
-      this framework at all: a condition fixing the pole mass, and an observable sensitive to a massive companion
-      rather than to a deformed massless branch. Naming them is what makes them addressable.
+      What this note contributes is a boundary. Several inputs are missing before gravitational waves can test
+      this framework at all, and they are not interchangeable: a Lorentzian construction from which the kernel of
+      Definition~\ref{def:truncation} actually follows, rather than being posited; a renormalization condition
+      fixing $m_2^2$; the coupling of that mode to a detector and its excitation in a source; and a treatment of
+      the scalar and vector sectors sufficient to settle the mode content. Naming them is what makes them
+      addressable, and none of them is supplied here.
 
   \bibliographystyle{plain}
   \bibliography{cosmochrony-bibliography}
