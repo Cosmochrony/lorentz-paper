@@ -59,7 +59,7 @@
   $\Box$ and a summand annihilated by $\cEH + \beta\Box$.
   The second summand is a massive sector only when $\beta \neq 0$; for $\beta = 0$ it is trivial and the
   decomposition degenerates to $\ker\Box$.
-  Whenever the second summand is nontrivial, a generic solution satisfies neither factor equation on its own.
+  Wherever both summands are nontrivial, a generic solution satisfies neither factor equation on its own.
   In units with $c = 1$ the massless summand obeys $\omega^2 = |\vec k|^2$ exactly, with no correction at any
   order in $|\vec k|$.
   A quartic deformation of the graviton dispersion is therefore not a consequence of this kernel.
@@ -163,19 +163,24 @@
 
     \begin{remark}[The kernel is not a union]
       \label{rem:not-union}
-      Let $\cEH \neq 0$, let $\beta \neq 0$, and suppose $\ker Q \neq \{0\}$ in $\mathcal{V}$. The last is a
-      hypothesis on $\mathcal{V}$ and not a consequence of $\beta \neq 0$: a stable space may fail to contain
-      solutions of $Q h = 0$. It holds, for instance, in the tempered distributions, where $\ker Q$ carries the
-      plane waves with $k^2 = \cEH/\beta$.
+      Let $\cEH \neq 0$, let $\beta \neq 0$, and suppose that \emph{both} $\ker P \neq \{0\}$ and
+      $\ker Q \neq \{0\}$ in $\mathcal{V}$. These are hypotheses on $\mathcal{V}$, not consequences of
+      $\cEH \neq 0$ and $\beta \neq 0$: a stable space may fail to contain solutions of either factor equation.
+      They hold, for instance, in the tempered distributions, where $\ker P$ carries the plane waves with
+      $k^2 = 0$ and $\ker Q$ those with $k^2 = \cEH/\beta$.
+
       Then $\ker\OTT$ is \emph{strictly} larger than $\ker P \cup \ker Q$: given nonzero $h_0 \in \ker P$ and
-      $h_m \in \ker Q$, the sum
-      $h_0 + h_m$ solves $\OTT h = 0$ while satisfying neither factor equation, since
+      $h_m \in \ker Q$, the sum $h_0 + h_m$ solves $\OTT h = 0$ while satisfying neither factor equation, since
       $\Box(h_0+h_m) = -(\cEH/\beta)h_m \neq 0$ and $(\cEH + \beta\Box)(h_0+h_m) = \cEH h_0 \neq 0$.
       A generic solution is a superposition of the two sectors, not a member of either.
 
+      Both hypotheses are needed, and neither can be dropped.
       For $\beta = 0$ the operator reduces to $\cEH\Box$ and $\ker Q = \{0\}$: equation~\eqref{eq:directsum}
-      still holds, trivially, and the union coincides with the kernel. The strictness above is a statement about
-      $\beta \neq 0$.
+      still holds, trivially, and the union coincides with the kernel.
+      Symmetrically, $\ker Q$ is itself stable under $\Box$ --- if $Qh = 0$ then $\Box h = -(\cEH/\beta)h \in \ker Q$
+      --- so $\mathcal{V} = \ker Q$ is an admissible choice; there $\ker P = \{0\}$ by the proof of
+      Proposition~\ref{prop:decomposition}, and the union again coincides with the kernel.
+      Strictness is a statement about a space containing both sectors.
     \end{remark}
 
     \begin{remark}[The degenerate case]

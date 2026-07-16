@@ -48,19 +48,24 @@ and the decomposition of any $h^{\mathrm{TT}} \in \ker\mathcal{O}_{\mathrm{TT}}$
 with $h_0 \in \ker P$ and $h_m \in \ker Q$ is unique. If in addition $\beta \neq 0$, then $\ker Q$ is
 characterized by $\Box h_m = -(c_{\mathrm{EH}}/\beta)\,h_m$.
 
-**The kernel is not a union.** Let $c_{\mathrm{EH}} \neq 0$, let $\beta \neq 0$, and suppose
-$\ker Q \neq \lbrace 0 \rbrace$ in $\mathcal{V}$ — a hypothesis on $\mathcal{V}$, not a consequence of
-$\beta \neq 0$, since a stable space may contain no solution of $Q h = 0$; it holds in the tempered
-distributions, where $\ker Q$ carries the plane waves with $k^2 = c_{\mathrm{EH}}/\beta$. Then the kernel is
-**strictly larger** than $\ker P \cup \ker Q$. Given nonzero $h_0 \in \ker P$ and $h_m \in \ker Q$, the
-sum $h_0 + h_m$ solves $\mathcal{O}_{\mathrm{TT}} h^{\mathrm{TT}} = 0$ while satisfying **neither** factor
-equation: $\Box(h_0+h_m) = -(c_{\mathrm{EH}}/\beta)h_m \neq 0$ and
+**The kernel is not a union.** Let $c_{\mathrm{EH}} \neq 0$, let $\beta \neq 0$, and suppose that **both**
+$\ker P \neq \lbrace 0 \rbrace$ and $\ker Q \neq \lbrace 0 \rbrace$ in $\mathcal{V}$. These are hypotheses on
+$\mathcal{V}$, not consequences of $c_{\mathrm{EH}} \neq 0$ and $\beta \neq 0$: a stable space may contain no
+solution of either factor equation. They hold in the tempered distributions, where $\ker P$ carries the plane
+waves with $k^2 = 0$ and $\ker Q$ those with $k^2 = c_{\mathrm{EH}}/\beta$.
+
+Then the kernel is **strictly larger** than $\ker P \cup \ker Q$. Given nonzero $h_0 \in \ker P$ and
+$h_m \in \ker Q$, the sum $h_0 + h_m$ solves $\mathcal{O}_{\mathrm{TT}} h^{\mathrm{TT}} = 0$ while satisfying
+**neither** factor equation: $\Box(h_0+h_m) = -(c_{\mathrm{EH}}/\beta)h_m \neq 0$ and
 $(c_{\mathrm{EH}} + \beta\Box)(h_0+h_m) = c_{\mathrm{EH}} h_0 \neq 0$. A generic solution is a superposition of
 the two sectors, not a member of either.
 
-For $\beta = 0$ the operator reduces to $c_{\mathrm{EH}}\Box$ and $\ker Q = \lbrace 0 \rbrace$: the direct-sum
-identity still holds, trivially, and the union coincides with the kernel. The strictness above is a statement about
-$\beta \neq 0$.
+Both hypotheses are needed. For $\beta = 0$ the operator reduces to $c_{\mathrm{EH}}\Box$ and
+$\ker Q = \lbrace 0 \rbrace$: the direct-sum identity still holds, trivially, and the union coincides with the
+kernel. Symmetrically, $\ker Q$ is itself stable under $\Box$ — if $Qh = 0$ then
+$\Box h = -(c_{\mathrm{EH}}/\beta)h \in \ker Q$ — so $\mathcal{V} = \ker Q$ is an admissible choice; there
+$\ker P = \lbrace 0 \rbrace$ by the Bézout argument, and the union again coincides with the kernel. Strictness is
+a statement about a space containing **both** sectors.
 
 **Degenerate case.** If $c_{\mathrm{EH}} = 0$ the Bézout identity fails and the decomposition is unavailable:
 $\mathcal{O}_{\mathrm{TT}} = \beta\Box^2$, and $\ker\Box^2$ contains generalized solutions annihilated by
@@ -108,7 +113,7 @@ in either direction.
 ## Pole content
 
 Writing $z$ for the momentum-space image of $\Box$, the transverse-traceless propagator is, for
-$c_{\mathrm{EH}} \neq 0$,
+$c_{\mathrm{EH}} \neq 0$ **and** $\beta \neq 0$ — the partial fractions below divide by $\beta$ —
 
 $$\frac{1}{z(c_{\mathrm{EH}} + \beta z)}
 = \frac{1}{c_{\mathrm{EH}}}\left( \frac{1}{z} - \frac{1}{z + c_{\mathrm{EH}}/\beta} \right).$$
@@ -142,14 +147,20 @@ is not fully determined here.
 ## What is matching data
 
 The Seeley–DeWitt coefficient $a_4$ controls a **logarithmic contribution to the running** of the four-derivative
-couplings. It does not fix the finite value of $\beta^{\mathrm{ren}}$, which depends in addition on the overall
-normalization and sign of the determinant and on the renormalization prescription. An identification
-$\beta = -2\alpha_C$ read off the Weyl-squared part of $a_4$ omits all three, and is not a determination of
-$\beta^{\mathrm{ren}}$.
+couplings. It does not fix the finite value of $\beta^{\mathrm{ren}}$.
 
-The same holds for $c_{\mathrm{EH}}^{\mathrm{ren}}$: its finite value and sign are fixed by a renormalization
-condition together with the complete operator content. Consequently the pole mass
-$c_{\mathrm{EH}}^{\mathrm{ren}}/\beta^{\mathrm{ren}}$ is a **matching datum, not derivably tied to $\ell_\chi$**.
+The normalization and sign of $\tfrac12\log\det{}'A_g$ are **not** at issue: they are fixed by the definition of
+the functional. What leaves $\beta^{\mathrm{ren}}$ undetermined is the finite parts of the counterterms, the
+complete operator content, the continuation to Lorentzian signature, and the renormalization condition. An
+identification $\beta = -2\alpha_C$ read off the Weyl-squared part of $a_4$ supplies none of these, and is not a
+determination of $\beta^{\mathrm{ren}}$.
+
+The same holds for $c_{\mathrm{EH}}^{\mathrm{ren}}$. Consequently the **signed mass squared**
+
+$$m_2^2 = -\,\frac{c_{\mathrm{EH}}^{\mathrm{ren}}}{\beta^{\mathrm{ren}}}$$
+
+— equivalently the pole scale $|c_{\mathrm{EH}}^{\mathrm{ren}}/\beta^{\mathrm{ren}}|$ together with its sign —
+is a **matching datum, not derivably tied to $\ell_\chi$**.
 
 ## Open problems
 
@@ -167,10 +178,11 @@ $c_{\mathrm{EH}}^{\mathrm{ren}}/\beta^{\mathrm{ren}}$ is a **matching datum, not
 
 ## Interpretive status
 
-The truncation lands on the known pole content of quadratic gravity. It is tempting to read that agreement as
-support for the spectral construction; the reading is available but weak, since any construction generating $C^2$
-and $R^2$ sectors would agree equally well. The defensible statement is narrower: the truncation is compatible
-with the known infrared structure and predicts nothing beyond it that is presently observable.
+In its transverse-traceless sector, the posited kernel resembles quadratic gravity. It is tempting to read that
+resemblance as support for the spectral construction; the reading is available but weak, since any construction
+generating $C^2$ and $R^2$ sectors would resemble it equally well — and the resemblance is established here only
+for one helicity-2 pole, not for the full mode content. The defensible statement is narrower: the posited kernel
+is compatible with the known infrared structure and predicts nothing beyond it that is presently observable.
 
 What this note contributes is a **boundary**. Several inputs are missing before gravitational waves can test this
 framework at all, and they are **not interchangeable**:
