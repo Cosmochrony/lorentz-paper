@@ -1,122 +1,148 @@
-This repository contains the source of **No Quartic Graviton Dispersion from the Covariant Spectral
-Operator** (paper III of gravity / Lorentzian completion of the spectral entropy framework).
+This repository contains the source of **No Quartic Graviton Dispersion from the Local Covariant Four-Derivative
+Truncation** (paper III of gravity / Lorentzian completion of the spectral entropy framework).
 
-This is a **correction**. It determines the linearized infrared spectrum supported by the covariant spectral
-operator, and establishes what does *not* follow from it. It is a negative result, and it withdraws the
-gravitational-wave constraint claimed in the earlier treatment of this operator (see
-[Withdrawn claims](#withdrawn-claims) below).
+This note settles one question about the local covariant four-derivative truncation of the projective spectral
+action: whether it deforms the dispersion of the graviton. It does not. This is a negative result about a
+truncation, and its scope is exactly that.
 
-## What the operator supports
+## The operator considered
 
-In the transverse-traceless sector the quadratic operator factorizes **exactly**:
+The projective spectral action assigns to a metric the renormalized functional
+$S_\Pi[g] = \tfrac12\log\det{}'A_g$. Its metric variation carries a local Einstein term together with
+higher-derivative local terms, non-local form factors, and contributions of higher order in $\Box$.
 
-$$\mathcal{O}_{\mathrm{TT}} = c_{\mathrm{EH}}\Box + \beta\Box^2
-= c_{\mathrm{EH}}\Box\left(1 + \frac{\beta}{c_{\mathrm{EH}}}\Box\right).$$
+The object studied here is a **truncation** of that structure, and the truncation is an assumption, not a result.
+Linearizing about Minkowski spacetime, restricting to the transverse-traceless sector, retaining the local terms
+of the quadratic form up to four derivatives, and **discarding the non-local form factors and all terms of order
+$\Box^3$ and higher** leaves
 
-Because this is a product of two commuting factors, its kernel is the **union of the kernels of the factors** —
-there is no third branch, and in particular no branch obtained by expanding the bracket in powers of $k$. Every
-solution of $\mathcal{O}_{\mathrm{TT}} h^{\mathrm{TT}} = 0$ satisfies exactly one of:
+$$\mathcal{O}_{\mathrm{TT}} = c_{\mathrm{EH}}\Box + \beta\Box^2 ,$$
 
-- **(a) the massless branch**, $\Box h^{\mathrm{TT}} = 0$, a graviton of helicity $\pm 2$ whose dispersion is
-  $\omega^2 = c^2 k^2$ **exactly**, with no correction at any order in $k$;
-- **(b) a massive branch**, $\Box h^{\mathrm{TT}} = -\dfrac{c_{\mathrm{EH}}}{\beta}\, h^{\mathrm{TT}}$, a pole at
-  $k^2 = c_{\mathrm{EH}}/\beta$.
+with $c_{\mathrm{EH}}$ and $\beta$ constants. Every statement below is a statement about this truncated operator.
+None of them is a statement about the full renormalized kernel, and the difference matters wherever the discarded
+terms are not negligible — in particular in the ultraviolet.
 
-**Neither branch carries a quartic correction to the massless dispersion.** The massless factor is undeformed, and
-the second factor is a distinct pole rather than a correction to the first. The massless front is **luminal**, not
-subluminal.
+## Solution structure: a direct sum
 
-This is the standard spectrum of quadratic gravity — a massless graviton together with additional massive degrees of
-freedom (Stelle 1977; Calmet–Capozziello–Pryer 2017). The covariant spectral operator reproduces a known structure
-rather than predicting a new one.
+Write $P = \Box$ and $Q = c_{\mathrm{EH}} + \beta\Box$, so that $\mathcal{O}_{\mathrm{TT}} = PQ = QP$. For
+$c_{\mathrm{EH}} \neq 0$ the two factors are **coprime**, by the Bézout identity
 
-## No gravitational-wave bound follows
+$$Q - \beta P = c_{\mathrm{EH}} ,$$
 
-Gravitational-wave catalogues constrain modified dispersion relations of the form $\omega^2 = c^2k^2 + A_4 k^4$ on
-the propagating graviton. Such a constraint applies to a branch carrying a quartic deformation of the massless
-dispersion. The present operator has no such branch.
+a nonzero constant. The solution space is then the **direct sum**
 
-There is therefore **no mapping onto the $A_4$ parametrization, no induced value of $A_4$, and no bound on the
-pre-geometric scale $\ell_\chi$ from interferometric data.** The luminal propagation is consistent with the observed
-coincidence of gravitational and electromagnetic arrival times, but that consistency is shared with general
-relativity and carries no information about $\ell_\chi$.
+$$\ker\mathcal{O}_{\mathrm{TT}} = \ker\Box \,\oplus\, \ker(c_{\mathrm{EH}} + \beta\Box) ,$$
 
-## Matching data, not predictions
+and the decomposition of any $h^{\mathrm{TT}} \in \ker\mathcal{O}_{\mathrm{TT}}$ is unique:
+$h^{\mathrm{TT}} = h_0 + h_m$ with $\Box h_0 = 0$ and $\Box h_m = -(c_{\mathrm{EH}}/\beta)\,h_m$.
 
-The renormalized coefficients $c_{\mathrm{EH}}^{\mathrm{ren}}$ and $\beta^{\mathrm{ren}}$ — and hence the mass scale
-of the non-massless poles, set by their ratio — are **matching data**. They are fixed by a renormalization condition
-together with the complete operator content; they are not predicted by the minimal determinant, and the pole scale is
-**not derivably tied to $\ell_\chi$**. No identification of the renormalization scale with a cutoff supplies them:
-the power-sensitive and the finite/logarithmic statements belong to different schemes and are not interchangeable.
+The kernel is **strictly larger** than the set of solutions of the individual factor equations. Given nonzero
+$h_0 \in \ker P$ and $h_m \in \ker Q$, the sum $h_0 + h_m$ solves
+$\mathcal{O}_{\mathrm{TT}} h^{\mathrm{TT}} = 0$ while satisfying **neither** factor equation:
+$\Box(h_0+h_m) = -(c_{\mathrm{EH}}/\beta)h_m \neq 0$ and
+$(c_{\mathrm{EH}} + \beta\Box)(h_0+h_m) = c_{\mathrm{EH}} h_0 \neq 0$. A generic solution is a superposition of
+the two sectors, not a member of one of them.
 
-The mode content is likewise not fixed. The minimal $a_4$ carries an $R^2$ sector alongside $C^2$, which generically
-supports a **massive scalar mode** in addition to the massive spin-2 one. Excluding it requires a matching condition
-on the $R^2$ coefficient that the minimal determinant does not supply.
+**Degenerate case.** If $c_{\mathrm{EH}} = 0$ the Bézout identity fails and the decomposition is unavailable:
+$\mathcal{O}_{\mathrm{TT}} = \beta\Box^2$, and $\ker\Box^2$ contains generalized solutions annihilated by
+$\Box^2$ but not by $\Box$.
 
-## The causal construction is an open programme
+## Absence of a quartic graviton dispersion
 
-The Lorentzian action $S_\Pi^{(L)}[g] = \tfrac12\,\mathrm{Re}\,\log\det{}'\mathcal{D}_g$, with the retarded Green
-operator $G_R$ entering the second variation, is a **working definition, not a derivation**. A Schwinger–Keldysh
-in-in effective action is built from doubled field configurations on a closed time path, with the two branches
-coupled by the boundary condition at the turning point (Jordan 1986; Calzetta–Hu 2008). Substituting $G_R$ for
-$A^{-1}$ in an ordinary single-field Hessian is not equivalent to that construction and does not follow from it.
+For $c_{\mathrm{EH}} \neq 0$ the massless summand lies in $\ker\Box$ by construction, and $\ker\Box$ does not
+depend on $\beta$. Hence for plane waves $h_0 \sim e^{ik\cdot x}$,
 
-## What is retained, conditionally
+$$\omega^2 = c^2 k^2 ,$$
 
-- The exact factorization of the transverse-traceless operator.
-- The massless helicity-$\pm 2$ branch with luminal dispersion.
-- The existence of a massive pole whose scale is a matching datum.
-- The **elliptic gravitomagnetic constraint** of the sourced vector sector, conditional on the projected matter
-  current $T^{(\Pi)}_{0i}$. Once that current is supplied, the vector sector fixes the frame-dragging potential
-  $g_{0i}$ as in linearized general relativity; the gap sits entirely upstream. Retaining the subleading
-  $\beta\Box^2$ operator gives a short-range correction of range
-  $\sim\sqrt{|\beta^{\mathrm{ren}}/c_{\mathrm{EH}}^{\mathrm{ren}}|}$ — a matching datum, **not** $\ell_\chi$.
+**with no correction at any order in $k$**.
 
-## Withdrawn claims
+A relation $\omega^2 = c^2k^2 - \gamma\,\ell_\chi^2 k^4 + \mathcal{O}(k^6)$ describes a single branch whose
+massless dispersion is deformed at quartic order. The truncation has no such branch. Expanding
+$(1 + (\beta/c_{\mathrm{EH}})\Box)^{-1}$ in powers of $\Box$ rearranges the residues of the propagator; it does
+not move the zero of $\Box$, which is where the massless pole sits. A quartic coefficient obtained that way is an
+artefact of treating a two-pole propagator as one deformed pole.
 
-An earlier treatment of this operator read the factorized quadratic form as a single perturbed branch and expanded
-it in $k$, obtaining a quartic correction to the graviton dispersion. That step is not licensed by the operator: a
-product of commuting factors has no branch other than the zero sets of its factors, and the massless factor is
-undeformed. The same treatment fixed the Einstein prefactor by identifying the renormalization scale with the
-cutoff and reading a coefficient off $a_2$, which conflates two regularization schemes and assigns a derived value
-to a quantity that a renormalization condition must supply.
+Gravitational-wave catalogues constrain $\omega^2 = c^2k^2 + A_4 k^4$ on the propagating graviton. The truncation
+induces no such $A_4$. There is consequently **no mapping of this construction onto that parametrization, and no
+bound on the pre-geometric scale $\ell_\chi$ from interferometric dispersion data**.
 
-The following claims are withdrawn:
+**No front-velocity claim.** $\omega^2 = c^2k^2$ is a statement about the truncation, not about signal fronts. A
+front velocity is governed by the large-$k$ behaviour of the full kernel, precisely where the discarded non-local
+and $\mathcal{O}(\Box^3)$ terms are not negligible. No statement about front propagation is made here, in either
+direction.
 
-1. that the covariant spectral operator generates a dispersion relation
-   $\omega^2 = c^2 k^2 - \gamma\,\ell_\chi^2 k^4 + \mathcal{O}(k^6)$ on the graviton branch;
-2. that the ratio of Seeley–DeWitt coefficients fixes a universal value $\gamma = 1/(180\zeta)$, and
-   $\gamma = 1/30$ in a "natural spectral scheme";
-3. that this structure maps onto the $A_4$ parametrization of gravitational-wave catalogues and yields a bound
-   $\ell_\chi \lesssim \sqrt{180\,\zeta\,A_4^{\mathrm{obs}}}$;
-4. that gravitational-wave propagation is subluminal in this framework;
-5. that the scalar sector is non-dynamical in the infrared;
-6. that the non-massless pole lies at $k^2 \sim \ell_\chi^{-2}$ as a consequence of the construction;
-7. that the real part of the hyperbolic determinant is equivalent to a Schwinger–Keldysh prescription.
+## Pole content
+
+Writing $z$ for the momentum-space image of $\Box$, the transverse-traceless propagator is, for
+$c_{\mathrm{EH}} \neq 0$,
+
+$$\frac{1}{z(c_{\mathrm{EH}} + \beta z)}
+= \frac{1}{c_{\mathrm{EH}}}\left( \frac{1}{z} - \frac{1}{z + c_{\mathrm{EH}}/\beta} \right).$$
+
+Two facts follow, and they are **independent of one another**:
+
+1. **Ghost character.** The two residues have opposite signs, whatever the signs of $c_{\mathrm{EH}}$ and $\beta$.
+   The second pole is therefore a ghost relative to the massless one. This does **not** depend on
+   $c_{\mathrm{EH}}/\beta$.
+2. **Tachyonic character.** The second pole sits at $z = -c_{\mathrm{EH}}/\beta$, so the sign of
+   $c_{\mathrm{EH}}/\beta$ fixes the sign of the corresponding mass squared, and with it whether the mode is
+   tachyonic. This is a separate question from (1) and has a separate answer.
+
+This is the standard pole content of quadratic gravity — a massless graviton accompanied by a massive spin-2 ghost
+(Stelle 1977; Calmet–Capozziello–Pryer 2017). The truncation reproduces a known structure.
+
+**The scalar sector is not settled.** The minimal $a_4$ carries an $R^2$ sector alongside $C^2$. In the effective
+action at second order in curvature this generically supports a massive scalar in addition to the massive spin-2
+mode. Excluding it requires a matching condition on the $R^2$ coefficient, so the mode content of the truncation
+is not fully determined here.
+
+## What is matching data
+
+The Seeley–DeWitt coefficient $a_4$ controls a **logarithmic contribution to the running** of the four-derivative
+couplings. It does not fix the finite value of $\beta^{\mathrm{ren}}$, which depends in addition on the overall
+normalization and sign of the determinant and on the renormalization prescription. An identification
+$\beta = -2\alpha_C$ read off the Weyl-squared part of $a_4$ omits all three, and is not a determination of
+$\beta^{\mathrm{ren}}$.
+
+The same holds for $c_{\mathrm{EH}}^{\mathrm{ren}}$: its finite value and sign are fixed by a renormalization
+condition together with the complete operator content. Consequently the pole mass
+$c_{\mathrm{EH}}^{\mathrm{ren}}/\beta^{\mathrm{ren}}$ is a **matching datum, not derivably tied to $\ell_\chi$**.
+
+## Open problems
+
+- **The in-in construction.** A Schwinger–Keldysh effective action is built from doubled field configurations on a
+  closed time path, with the branches coupled by the boundary condition at the turning point (Jordan 1986;
+  Calzetta–Hu 2008). Substituting a retarded Green operator for $A_g^{-1}$ in an ordinary single-field Hessian is
+  not that construction and does not follow from it. Whether the projective spectral action admits a
+  closed-time-path formulation, and whether the quadratic form it would yield agrees with the truncation, is open.
+- **The vector sector.** The linearized vector equation carries a $\Box\bar h_{0i}$ term, hence a second time
+  derivative that harmonic gauge does not remove. Only under a stationarity assumption does it reduce to an
+  elliptic constraint. A derivation from the full linear system with spin projectors, and the fate of the
+  four-derivative correction within it, are open.
+- **Beyond the truncation.** The truncation discards non-local form factors and $\mathcal{O}(\Box^3)$ terms.
+  Whether the absence of a quartic graviton dispersion survives their inclusion is not addressed here.
 
 ## Interpretive status
 
-What the covariant spectral operator supports in the infrared is a known structure, not a new observable. Reading
-the appearance of the standard quadratic-gravity spectrum as evidence for the spectral substrate is a weak reading:
-reproducing a known structure is a consistency check, and any construction generating an $R^2$ and $C^2$ sector
-would pass it. The defensible statement is narrower — the covariant spectral operator is compatible with the known
-infrared spectrum, and predicts nothing beyond it that is presently observable.
+The truncation lands on the known pole content of quadratic gravity. It is tempting to read that agreement as
+support for the spectral construction; the reading is available but weak, since any construction generating $C^2$
+and $R^2$ sectors would agree equally well. The defensible statement is narrower: the truncation is compatible
+with the known infrared structure and predicts nothing beyond it that is presently observable.
 
-The value of this result is **diagnostic**. Two independent inputs are missing before gravitational waves can probe
-this framework at all:
+What this note contributes is a **boundary**. It removes a putative interferometric handle on the pre-geometric
+scale and isolates what a genuine one would require — two inputs that must be supplied before gravitational waves
+can test this framework at all:
 
-1. a condition fixing $c_{\mathrm{EH}}^{\mathrm{ren}}/\beta^{\mathrm{ren}}$, which sets the mass of the
-   non-massless pole;
-2. an observable sensitive to a massive pole rather than to a deformed massless dispersion — the catalogue
+1. a condition fixing the pole mass $c_{\mathrm{EH}}^{\mathrm{ren}}/\beta^{\mathrm{ren}}$;
+2. an observable sensitive to a **massive companion** rather than to a deformed massless branch — the catalogue
    parametrization is not of that type, and the $R^2$ sector must be settled before the mode content is even known.
 
-Until both are supplied, this framework makes no gravitational-wave prediction. Naming these inputs precisely is
-what makes them addressable, and is what this paper contributes in place of the constraint it withdraws.
+Naming them precisely is what makes them addressable.
 
 ## Keywords
 
-Spectral geometry, emergent gravity, Lorentzian geometry, quadratic gravity, graviton dispersion, pole structure,
-renormalization matching, heat-kernel expansion, Seeley–DeWitt coefficients, closed time path
+Quadratic gravity, graviton dispersion, four-derivative truncation, pole structure, ghost residue, renormalization
+matching, heat-kernel expansion, effective field theory
 
 ## Repository Contents
 ```
@@ -136,7 +162,7 @@ paper/
 
 If you reference this work, please cite:
 
-> J. Beau, *No Quartic Graviton Dispersion from the Covariant Spectral Operator*, 2026.
+> J. Beau, *No Quartic Graviton Dispersion from the Local Covariant Four-Derivative Truncation*, 2026.
 > [doi:10.5281/zenodo.18826644](https://doi.org/10.5281/zenodo.18826644)
 
 ## Acknowledgements
@@ -152,6 +178,6 @@ of the author.
 This repository is intended as a research reference.
 
 Critical feedback, independent analyses, and phenomenological scrutiny are welcome.
-Please open an issue to discuss the factorization, the matching conditions fixing
+Please open an issue to discuss the direct-sum decomposition, the matching conditions fixing
 $c_{\mathrm{EH}}^{\mathrm{ren}}/\beta^{\mathrm{ren}}$, the $R^2$ sector and its mode content,
 or the closed-time-path construction.
