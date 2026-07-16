@@ -60,12 +60,22 @@ $h_m \in \ker Q$, the sum $h_0 + h_m$ solves $\mathcal{O}_{\mathrm{TT}} h^{\math
 $(c_{\mathrm{EH}} + \beta\Box)(h_0+h_m) = c_{\mathrm{EH}} h_0 \neq 0$. A generic solution is a superposition of
 the two sectors, not a member of either.
 
-Both hypotheses are needed. For $\beta = 0$ the operator reduces to $c_{\mathrm{EH}}\Box$ and
-$\ker Q = \lbrace 0 \rbrace$: the direct-sum identity still holds, trivially, and the union coincides with the
-kernel. Symmetrically, $\ker Q$ is itself stable under $\Box$ — if $Qh = 0$ then
-$\Box h = -(c_{\mathrm{EH}}/\beta)h \in \ker Q$ — so $\mathcal{V} = \ker Q$ is an admissible choice; there
-$\ker P = \lbrace 0 \rbrace$ by the Bézout argument, and the union again coincides with the kernel. Strictness is
-a statement about a space containing **both** sectors.
+Neither hypothesis follows from the other, and each fails on an admissible space with $\beta \neq 0$ fixed. Both
+$\ker P$ and $\ker Q$ are stable under $\Box$: the first because $\Box$ annihilates it, the second because
+$Qh = 0$ gives $\Box h = -(c_{\mathrm{EH}}/\beta)h$, which lies again in $\ker Q$. Each is therefore an admissible
+choice of $\mathcal{V}$, and on each the operator degenerates:
+
+- on $\mathcal{V} = \ker P$, the operator $\Box$ acts as $0$, so $Q$ acts as $c_{\mathrm{EH}} I$ and is
+  invertible: $\ker Q = \lbrace 0 \rbrace$, while $\ker\mathcal{O}_{\mathrm{TT}} = \mathcal{V} = \ker P$;
+- on $\mathcal{V} = \ker Q$, the operator $\Box$ acts as $-(c_{\mathrm{EH}}/\beta) I$ and is invertible:
+  $\ker P = \lbrace 0 \rbrace$, while $\ker\mathcal{O}_{\mathrm{TT}} = \mathcal{V} = \ker Q$.
+
+In both cases the union coincides with the kernel and strictness fails. Strictness is thus a statement about a
+space containing **both** sectors, not about the operator alone.
+
+Separately, and outside the hypotheses above: for $\beta = 0$ the operator reduces to $c_{\mathrm{EH}}\Box$, so
+$\ker Q = \lbrace 0 \rbrace$ on any $\mathcal{V}$; the direct-sum identity still holds, trivially, and the union
+again coincides with the kernel.
 
 **Degenerate case.** If $c_{\mathrm{EH}} = 0$ the Bézout identity fails and the decomposition is unavailable:
 $\mathcal{O}_{\mathrm{TT}} = \beta\Box^2$, and $\ker\Box^2$ contains generalized solutions annihilated by

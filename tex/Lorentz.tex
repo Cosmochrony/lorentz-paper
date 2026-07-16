@@ -174,13 +174,22 @@
       $\Box(h_0+h_m) = -(\cEH/\beta)h_m \neq 0$ and $(\cEH + \beta\Box)(h_0+h_m) = \cEH h_0 \neq 0$.
       A generic solution is a superposition of the two sectors, not a member of either.
 
-      Both hypotheses are needed, and neither can be dropped.
-      For $\beta = 0$ the operator reduces to $\cEH\Box$ and $\ker Q = \{0\}$: equation~\eqref{eq:directsum}
-      still holds, trivially, and the union coincides with the kernel.
-      Symmetrically, $\ker Q$ is itself stable under $\Box$ --- if $Qh = 0$ then $\Box h = -(\cEH/\beta)h \in \ker Q$
-      --- so $\mathcal{V} = \ker Q$ is an admissible choice; there $\ker P = \{0\}$ by the proof of
-      Proposition~\ref{prop:decomposition}, and the union again coincides with the kernel.
-      Strictness is a statement about a space containing both sectors.
+      Neither hypothesis follows from the other, and each fails on an admissible space with $\beta \neq 0$ fixed.
+      Both $\ker P$ and $\ker Q$ are stable under $\Box$: the first because $\Box$ annihilates it, the second
+      because $Qh = 0$ gives $\Box h = -(\cEH/\beta)h$, which lies again in $\ker Q$. Each is therefore an
+      admissible choice of $\mathcal{V}$, and on each the operator degenerates:
+      \begin{itemize}[nosep]
+        \item on $\mathcal{V} = \ker P$, the operator $\Box$ acts as $0$, so $Q$ acts as $\cEH I$ and is
+              invertible: $\ker Q = \{0\}$, while $\ker\OTT = \mathcal{V} = \ker P$;
+        \item on $\mathcal{V} = \ker Q$, the operator $\Box$ acts as $-(\cEH/\beta)I$ and is invertible:
+              $\ker P = \{0\}$, while $\ker\OTT = \mathcal{V} = \ker Q$.
+      \end{itemize}
+      In both cases the union coincides with the kernel and strictness fails. Strictness is thus a statement about
+      a space containing both sectors, not about the operator alone.
+
+      Separately, and outside the hypotheses above: for $\beta = 0$ the operator reduces to $\cEH\Box$, so
+      $\ker Q = \{0\}$ on any $\mathcal{V}$; equation~\eqref{eq:directsum} still holds, trivially, and the union
+      again coincides with the kernel.
     \end{remark}
 
     \begin{remark}[The degenerate case]
